@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @internet %>
+
+<div>
+  <%= link_to "Edit this internet", edit_internet_path(@internet) %> |
+  <%= link_to "Back to internets", internets_path %>
+
+  <%= button_to "Destroy this internet", @internet, method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @suiga %>
+
+<div>
+  <%= link_to "Edit this suiga", edit_suiga_path(@suiga) %> |
+  <%= link_to "Back to suigas", suigas_path %>
+  <%= link_to "View your Invoive", invoice_url %>
+  <%= button_to "Destroy this suiga", @suiga, method: :delete %>
+</div>

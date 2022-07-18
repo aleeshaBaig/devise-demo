@@ -1,0 +1,32 @@
+<%= form_with(model: internet) do |form| %>
+  <% if internet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(internet.errors.count, "error") %> prohibited this internet from being saved:</h2>
+
+      <ul>
+        <% internet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :company, style: "display: block" %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div>
+    <%= form.label :consumerId, style: "display: block" %>
+    <%= form.number_field :consumerId %>
+  </div>
+
+  <div>
+    <%= form.label :customer_id, style: "display: block" %>
+    <%= form.text_field :customer_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

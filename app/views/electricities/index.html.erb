@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Electricities</h1>
+
+<div id="electricities">
+  <% @electricities.each do |electricity| %>
+    <%= render electricity %>
+    <p>
+      <%= link_to "Enter your Details", electricity %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New", new_electricity_path %>

@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @electricity %>
+
+<div>
+  <%= link_to "Edit", edit_electricity_path(@electricity) %> |
+  <%= link_to "Back ", electricities_path %>
+  <%= link_to "Choose Company", new_electricity_path %>
+
+  <%= button_to "Delete", @electricity, method: :delete %>
+</div>
+<%= link_to 'Pay Now',invoices_path %>

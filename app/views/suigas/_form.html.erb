@@ -1,0 +1,32 @@
+<%= form_with(model: suiga) do |form| %>
+  <% if suiga.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(suiga.errors.count, "error") %> prohibited this suiga from being saved:</h2>
+
+      <ul>
+        <% suiga.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :company, style: "display: block" %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div>
+    <%= form.label :consumerId, style: "display: block" %>
+    <%= form.number_field :consumerId %>
+  </div>
+
+  <div>
+    <%= form.label :customer_id, style: "display: block" %>
+    <%= form.text_field :customer_id %>
+  </div>
+
+  <div>
+    <%= form.submit value:"Next to generate invoice" %>
+  </div>
+<% end %>

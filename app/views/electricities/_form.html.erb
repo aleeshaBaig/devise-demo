@@ -1,0 +1,34 @@
+<%= form_with(model: electricity) do |form| %>
+  <% if electricity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(electricity.errors.count, "error") %> prohibited this electricity from being saved:</h2>
+
+      <ul>
+        <% electricity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :company, style: "display: block" %>
+    <%= form.select :city, ["LESCO","FESCO","HESCO","IESCO","K-Electric","MEPCO","SPECO"] %>
+
+  </div>
+  
+  <div>
+    <%= form.label :consumerId, style: "display: block" %>
+    <%= form.text_field :consumerId %>
+  </div>
+  
+  <div>
+  <%= form.hidden_field :user_id, value:current_user.id %>
+  </div>
+
+  
+
+  <div>
+    <%= form.submit value:"Next" %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @customer %>
+
+<div>
+  <%= link_to "Edit", edit_customer_path(@customer) %> |
+  <%= link_to "Back", customers_path %>
+
+  <%= button_to "Delete", @customer, method: :delete %>
+</div>
+<%= link_to 'Choose your category', category_path %>

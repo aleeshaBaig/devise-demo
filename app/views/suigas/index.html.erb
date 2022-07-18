@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Information of Sui Gas</h1>
+
+<div id="suigas">
+  <% @suigas.each do |suiga| %>
+    <%= render suiga %>
+    <p>
+      <%= link_to "Show ", suiga %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Enter your details", new_suiga_path %>
